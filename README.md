@@ -55,14 +55,23 @@ git clone https://github.com/susantabiswas/realtime-facial-emotion-analyzer.git
 pip install -r requirements.txt
 ```
 
-### Docker Image
-You can pull the docker image for this project and run the code there.<br>
-```docker pull susantabiswas/emotion-analyzer:latest```
+
 
 ### Dockerfile
 You can build the docker image from the docker file present in the repo.
 
 ```docker build -t <name> .```
+
+#### Running the dockerfile
+Create a /data folder with the datafiles in this repository and then add your own files (e.g. video)
+
+Now map the folder to the dockercontainer
+- It is very important to clone the files from this repo into the data folder!
+
+
+```
+docker run -v "/c/Users/Jeppe/Documents/Emotional Analysis/dockerVolume/StaticImage.py:/realtime-facial-emotion-analyzer/StaticImage.py" -v "/c/Users/Jeppe/Documents/Emotional Analysis/dockerVolume/data:/realtime-facial-emotion-analyzer/data" jeppes-emotions:latest python StaticImage.py
+```
 
 
 # Project Structure

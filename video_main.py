@@ -9,6 +9,8 @@ Usage: python video_main"""
 # ===================================================
 import sys
 import time
+import os
+
 from typing import Dict, List
 
 import cv2
