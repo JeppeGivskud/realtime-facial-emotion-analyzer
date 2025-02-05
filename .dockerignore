@@ -8,3 +8,4 @@
 .vscode
 data/media
 data/sample
+.DS_Store
